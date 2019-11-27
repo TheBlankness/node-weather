@@ -8,7 +8,6 @@ const port = process.env.PORT || 3000;
 const publicDirectory = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
-
 //setup handlebars engine and views locaiton
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
@@ -48,7 +47,7 @@ app.get("/weather", (req, res) => {
   }
 
   res.send({
-    forecast: "Clear",
+    forecast: "Clear and sunny",
     location: req.query.address
   });
 });
